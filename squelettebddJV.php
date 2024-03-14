@@ -13,23 +13,24 @@
 
         </nav>
         <h1>Notre ensemble de jeux vidéo</h1>
+<!-- form recherche -->
+        <form method="GET">
+            <input type="search" name="s" placeholder="rechercher un jeu">
+            <input type="submit" name="envoyer" placeholder="Rechercher">
+        </form>
     </body>
 
 </html>
 
-<!-- Insérer recherche -->
-<php>
-</php>
-
-<!-- Insérer tableur -->
-<php>
-</php>
+<!-- tableur -->
+<?php
+$bdd = newPDO('mysql:host=localhost;dbname=games;charset=utf8', 'root', '');
+$reponse = $bdd->query('select * from games');
+while ($donnees = $reponse->fetch())
+    {
+/php>
 
 <!-- Insérer outil favoris pour utilisateurs -->
-<php>
-</php>
-
-<!-- Insérer outil  -->
 <php>
 </php>
 
